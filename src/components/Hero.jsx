@@ -131,7 +131,7 @@ export default function Hero({ onExploreClick }) {
                 {/* Photo */}
                 <div className="relative h-72 sm:h-80 w-full rounded-2xl overflow-hidden bg-slate-800">
                   <img
-                    src="./assets/img_2b66.jpg"
+                    src="./assets/stitch/stitch_13_c4c0bc5c7b.jpg"
                     alt="Dra. Paula Feliciano - Biomédica Esteta"
                     className="w-full h-full object-cover object-top"
                   />

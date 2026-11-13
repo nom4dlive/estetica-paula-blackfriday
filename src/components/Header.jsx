@@ -20,7 +20,7 @@ export default function Header({ onSelectPackageClick }) {
           {/* Dra. Paula Circular Portrait */}
           <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-[#CBB68B] overflow-hidden bg-slate-900 shadow-md shadow-[#CBB68B]/10 shrink-0">
             <img
-              src="./assets/img_2b66.jpg"
+              src="./assets/stitch/stitch_13_c4c0bc5c7b.jpg"
               alt="Dra. Paula Feliciano"
               className="w-full h-full object-cover object-top"
               onError={(e) => {
