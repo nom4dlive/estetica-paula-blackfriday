@@ -3,24 +3,23 @@ import { ShieldCheck, Clock, CheckCircle2, Award, ArrowDown } from 'lucide-react
 import PaulaEmblem from './brand/PaulaEmblem';
 
 export default function Hero({ onExploreClick }) {
-  // Countdown timer logic
-  const [timeLeft, setTimeLeft] = useState({
-    days: 4,
-    hours: 11,
-    minutes: 48,
-    seconds: 32,
-  });
+  // Countdown timer — fixed target: 15/11/2026 23:59:59 BRT
+  const getTimeLeft = () => {
+    const target = new Date('2026-11-15T23:59:59-03:00');
+    const now = new Date();
+    const diff = Math.max(0, target - now);
+    return {
+      days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+      minutes: Math.floor((diff / 1000 / 60) % 60),
+      seconds: Math.floor((diff / 1000) % 60),
+    };
+  };
+
+  const [timeLeft, setTimeLeft] = useState(getTimeLeft);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev.seconds > 0) return { ...prev, seconds: prev.seconds - 1 };
-        if (prev.minutes > 0) return { ...prev, minutes: 59, seconds: 59 };
-        if (prev.hours > 0) return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
-        if (prev.days > 0) return { ...prev, days: prev.days - 1, hours: 23, minutes: 59, seconds: 59 };
-        return prev;
-      });
-    }, 1000);
+    const timer = setInterval(() => setTimeLeft(getTimeLeft()), 1000);
     return () => clearInterval(timer);
   }, []);
 
