@@ -1,0 +1,58 @@
+/* Motion-UI v4.2 Design Tokens & Animations */
+:root {
+  --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast: 0.18s;
+  --duration-normal: 0.35s;
+  --duration-slow: 0.6s;
+  
+  --champagne-gold: #cbb68b;
+  --champagne-light: #e5d6ba;
+  --champagne-dark: #9b855a;
+}
+
+/* Tactile Micro-Interactions */
+.tap-luxury {
+  transition: transform var(--duration-fast) var(--ease-spring), box-shadow var(--duration-fast) var(--ease-luxury);
+}
+.tap-luxury:active {
+  transform: scale(0.98);
+}
+
+/* Smooth Luxury Transitions */
+.transition-luxury {
+  transition-timing-function: var(--ease-luxury);
+  transition-duration: var(--duration-normal);
+}
+
+/* Ambient Brand Glow */
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.04);
+  }
+}
+
+.ambient-glow {
+  animation: glowPulse 6s ease-in-out infinite;
+}
+
+/* Reduced Motion Safety Guarantee */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .tap-luxury:active {
+    transform: none !important;
+  }
+  .ambient-glow {
+    animation: none !important;
+  }
+}

@@ -5,7 +5,6 @@ import {
   Download,
   MessageCircle,
   ShieldCheck,
-  Sparkles,
   X,
   FileCheck2,
   Calendar,
@@ -13,6 +12,7 @@ import {
 import { getWhatsAppUrl } from '../utils/whatsapp';
 import { generateContractPDF } from '../utils/pdfGenerator';
 import { formatCurrency } from '../utils/masks';
+import PaulaLogo from './brand/PaulaLogo';
 
 export default function SuccessModal({
   isOpen,
@@ -34,7 +34,7 @@ export default function SuccessModal({
           particleCount: 80,
           spread: 70,
           origin: { y: 0.6 },
-          colors: ['#D4AF37', '#10B981', '#F59E0B', '#FFFFFF'],
+          colors: ['#CBB68B', '#10B981', '#E5D6BA', '#FFFFFF'],
         });
       } catch (e) {
         console.warn('Confetti error:', e);
@@ -72,26 +72,33 @@ export default function SuccessModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-lg bg-[#0B0F17] border border-amber-500/40 rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6 my-8 animate-in fade-in zoom-in-95 duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md overflow-y-auto">
+      <div className="relative w-full max-w-lg bg-[#0B0F17] border border-[#CBB68B]/40 rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6 my-8 animate-in fade-in zoom-in-95 duration-200">
         
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-slate-400 hover:text-white p-1 rounded-lg bg-slate-900 border border-slate-800 transition-colors"
+          className="absolute top-4 right-4 text-slate-400 hover:text-white p-1 rounded-lg bg-slate-900 border border-slate-800 transition-colors tap-luxury"
         >
           <X className="w-4 h-4" />
         </button>
 
-        {/* Icon & Title */}
-        <div className="text-center space-y-2">
-          <div className="w-16 h-16 rounded-full bg-emerald-500/10 border-2 border-emerald-500/40 flex items-center justify-center mx-auto text-emerald-400 shadow-lg shadow-emerald-950">
-            <CheckCircle2 className="w-9 h-9 stroke-[2.2]" />
+        {/* Vector Brand Logo & Title */}
+        <div className="text-center space-y-3">
+          <div className="flex justify-center pt-2">
+            <PaulaLogo.Vertical
+              className="w-44 sm:w-48 h-auto mx-auto"
+              textColor="#F8FAFC"
+              goldColor="#CBB68B"
+            />
           </div>
 
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 text-amber-300 text-xs font-semibold border border-amber-500/20">
-            <Sparkles className="w-3.5 h-3.5" />
-            CONTRATO FORMALIZADO COM SUCESSO!
+          <div className="w-14 h-14 rounded-full bg-emerald-500/10 border-2 border-emerald-500/40 flex items-center justify-center mx-auto text-emerald-400 shadow-lg shadow-emerald-950">
+            <CheckCircle2 className="w-8 h-8 stroke-[2.2]" />
+          </div>
+
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#CBB68B]/10 text-[#CBB68B] text-xs font-semibold border border-[#CBB68B]/25">
+            ✦ CONTRATO FORMALIZADO COM SUCESSO!
           </div>
 
           <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white">
@@ -121,12 +128,12 @@ export default function SuccessModal({
 
           <div className="flex items-center justify-between border-b border-slate-800 pb-2">
             <span className="text-slate-400">Document ID:</span>
-            <span className="font-mono text-amber-300 text-[11px]">{auditData.docId.slice(0, 18)}...</span>
+            <span className="font-mono text-[#E5D6BA] text-[11px]">{auditData.docId.slice(0, 18)}...</span>
           </div>
 
           <div className="flex items-center justify-between">
             <span className="text-slate-400">Vigência Obrigatória:</span>
-            <span className="font-semibold text-amber-300 flex items-center gap-1">
+            <span className="font-semibold text-[#CBB68B] flex items-center gap-1">
               <Calendar className="w-3.5 h-3.5" /> Sessões em 2026
             </span>
           </div>
@@ -140,14 +147,14 @@ export default function SuccessModal({
           </p>
         </div>
 
-        {/* Action Buttons */}
+        {/* Action Buttons with Motion-UI Tap Physics */}
         <div className="space-y-3 pt-1">
           {/* Main Action: WhatsApp */}
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-sm tracking-wide transition-all shadow-xl shadow-emerald-950 flex items-center justify-center gap-2 group"
+            className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-sm tracking-wide shadow-xl shadow-emerald-950 flex items-center justify-center gap-2 group tap-luxury transition-luxury"
           >
             <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
             <span>
@@ -160,7 +167,7 @@ export default function SuccessModal({
             type="button"
             onClick={handleDownloadPDF}
             disabled={isGeneratingPDF}
-            className="w-full py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold text-xs transition-colors flex items-center justify-center gap-2"
+            className="w-full py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold text-xs flex items-center justify-center gap-2 tap-luxury transition-luxury"
           >
             {isGeneratingPDF ? (
               <span>Gerando PDF oficial...</span>
@@ -171,7 +178,7 @@ export default function SuccessModal({
               </>
             ) : (
               <>
-                <Download className="w-4 h-4 text-amber-400" />
+                <Download className="w-4 h-4 text-[#CBB68B]" />
                 <span>Baixar Cópia do Contrato Assinado (PDF)</span>
               </>
             )}

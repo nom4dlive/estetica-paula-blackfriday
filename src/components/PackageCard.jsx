@@ -9,10 +9,10 @@ export default function PackageCard({ pkg, isSelected, onSelect }) {
   return (
     <div
       onClick={() => onSelect(pkg)}
-      className={`relative rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 flex flex-col justify-between ${
+      className={`relative rounded-3xl overflow-hidden cursor-pointer tap-luxury transition-luxury flex flex-col justify-between ${
         isSelected
-          ? 'ring-2 ring-[#D4AF37] bg-[#101623] shadow-2xl shadow-amber-500/20 transform -translate-y-1'
-          : 'bg-[#0E131F]/90 border border-slate-800/80 hover:border-amber-500/40 hover:bg-[#121826]'
+          ? 'ring-2 ring-[#CBB68B] bg-[#101623] shadow-2xl shadow-[#CBB68B]/20 transform -translate-y-1'
+          : 'bg-[#0E131F]/90 border border-slate-800/80 hover:border-[#CBB68B]/50 hover:bg-[#121826]'
       }`}
     >
       {/* Top Image & Badges */}
@@ -23,7 +23,7 @@ export default function PackageCard({ pkg, isSelected, onSelect }) {
             alt={pkg.title}
             className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
             onError={(e) => {
-              e.target.src = '/assets/img_2b66.jpg'; // fallback
+              e.target.src = './assets/img_2b66.jpg'; // fallback
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0E131F] via-transparent to-black/40" />
@@ -40,7 +40,7 @@ export default function PackageCard({ pkg, isSelected, onSelect }) {
 
           {/* Selected marker */}
           {isSelected && (
-            <div className="absolute top-3 right-3 bg-amber-500 text-black px-2.5 py-1 rounded-full text-[11px] font-extrabold flex items-center gap-1 shadow-lg">
+            <div className="absolute top-3 right-3 bg-[#CBB68B] text-black px-2.5 py-1 rounded-full text-[11px] font-extrabold flex items-center gap-1 shadow-lg">
               <Check className="w-3.5 h-3.5 stroke-[3]" />
               SELECIONADO
             </div>
@@ -48,7 +48,7 @@ export default function PackageCard({ pkg, isSelected, onSelect }) {
 
           {/* Category & Session label */}
           <div className="absolute bottom-2 left-3 right-3 flex items-center justify-between text-xs text-slate-300">
-            <span className="bg-black/60 backdrop-blur-sm px-2 py-0.5 rounded text-[11px] font-medium text-amber-300 border border-amber-500/20">
+            <span className="bg-black/60 backdrop-blur-sm px-2 py-0.5 rounded text-[11px] font-medium text-[#CBB68B] border border-[#CBB68B]/30">
               {pkg.category}
             </span>
             <span className="bg-black/60 backdrop-blur-sm px-2 py-0.5 rounded text-[11px] font-medium text-slate-200">
@@ -69,7 +69,7 @@ export default function PackageCard({ pkg, isSelected, onSelect }) {
           </div>
 
           {/* Price Box */}
-          <div className="bg-[#07090E]/80 border border-amber-500/20 rounded-2xl p-3.5 space-y-1.5">
+          <div className="bg-[#07090E]/80 border border-[#CBB68B]/20 rounded-2xl p-3.5 space-y-1.5">
             <div className="flex items-center justify-between">
               <span className="text-xs text-slate-400 line-through">
                 De {formatCurrency(pkg.originalPrice)}
@@ -81,7 +81,7 @@ export default function PackageCard({ pkg, isSelected, onSelect }) {
 
             {/* Pix Highlight */}
             <div className="pt-0.5">
-              <div className="text-[11px] text-amber-400 font-semibold uppercase tracking-wider">
+              <div className="text-[11px] text-[#CBB68B] font-semibold uppercase tracking-wider">
                 À Vista no Pix:
               </div>
               <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
@@ -92,7 +92,7 @@ export default function PackageCard({ pkg, isSelected, onSelect }) {
             {/* Installments Option */}
             <div className="pt-1 border-t border-slate-800 flex items-center justify-between text-xs text-slate-300">
               <span className="text-slate-400">Ou no Cartão:</span>
-              <span className="font-semibold text-amber-300">
+              <span className="font-semibold text-[#E5D6BA]">
                 {pkg.installments.count}x de {formatCurrency(pkg.installments.value)}
               </span>
             </div>
@@ -106,7 +106,7 @@ export default function PackageCard({ pkg, isSelected, onSelect }) {
             <ul className="space-y-1.5">
               {pkg.benefits.map((benefit, idx) => (
                 <li key={idx} className="flex items-start gap-2 text-xs text-slate-300 leading-snug">
-                  <Check className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />
+                  <Check className="w-3.5 h-3.5 text-[#CBB68B] shrink-0 mt-0.5" />
                   <span>{benefit}</span>
                 </li>
               ))}
@@ -123,10 +123,10 @@ export default function PackageCard({ pkg, isSelected, onSelect }) {
             e.stopPropagation();
             onSelect(pkg);
           }}
-          className={`w-full py-3 px-4 rounded-xl text-xs sm:text-sm font-bold tracking-wide transition-all flex items-center justify-center gap-2 ${
+          className={`w-full py-3 px-4 rounded-xl text-xs sm:text-sm font-bold tracking-wide tap-luxury transition-luxury flex items-center justify-center gap-2 ${
             isSelected
-              ? 'bg-[#D4AF37] text-black shadow-lg shadow-amber-500/30'
-              : 'bg-slate-800 hover:bg-amber-500 hover:text-black text-slate-200 border border-slate-700'
+              ? 'bg-[#CBB68B] text-black shadow-lg shadow-[#CBB68B]/30'
+              : 'bg-slate-800 hover:bg-[#CBB68B] hover:text-black text-slate-200 border border-slate-700'
           }`}
         >
           {isSelected ? (
@@ -143,7 +143,7 @@ export default function PackageCard({ pkg, isSelected, onSelect }) {
         </button>
 
         {pkg.urgencyText && (
-          <p className="text-center text-[10px] text-amber-400/80 mt-2 font-medium">
+          <p className="text-center text-[10px] text-[#CBB68B]/80 mt-2 font-medium">
             ⚡ {pkg.urgencyText}
           </p>
         )}

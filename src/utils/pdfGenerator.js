@@ -1,4 +1,5 @@
 import { formatCurrency } from './masks.js';
+import { BRAND_LOGO_BASE64 } from './brandLogoBase64.js';
 
 export async function generateContractPDF({
   patient,
@@ -26,26 +27,38 @@ export async function generateContractPDF({
     : `CARTÃO DE CRÉDITO: 10x de ${formatCurrency(selectedPackage.installments.value)} (Total: ${formatCurrency(selectedPackage.installments.total)})`;
 
   // ================= PAGE 1: CONTRATO & TERMO =================
-  // Header background bar
-  doc.setFillColor(11, 15, 23); // #0B0F17
-  doc.rect(0, 0, pageWidth, 32, 'F');
+  // Header background bar (Luxury Deep Black)
+  doc.setFillColor(7, 9, 14); // #07090E
+  doc.rect(0, 0, pageWidth, 36, 'F');
 
-  // Gold accent line
-  doc.setFillColor(212, 175, 55); // #D4AF37
-  doc.rect(0, 31, pageWidth, 1.5, 'F');
+  // Official Champagne Gold Accent Line (#CBB68B)
+  doc.setFillColor(203, 182, 139);
+  doc.rect(0, 35, pageWidth, 1.5, 'F');
 
-  // Header Title
-  doc.setTextColor(212, 175, 55);
+  // Embed Official Brand Logo in Header
+  let logoEmbedded = false;
+  try {
+    if (BRAND_LOGO_BASE64) {
+      // 783 x 207 px -> 3.78 aspect ratio. Width: 60mm, Height: 15.8mm
+      doc.addImage(BRAND_LOGO_BASE64, 'PNG', (pageWidth - 62) / 2, 4, 62, 16.4);
+      logoEmbedded = true;
+    }
+  } catch (e) {
+    console.warn('Fallback text for PDF logo:', e);
+  }
+
+  // Header Subtitle & Campaign Marker
+  doc.setTextColor(203, 182, 139);
   doc.setFont('helvetica', 'bold');
-  doc.setFontSize(15);
-  doc.text('DRA. PAULA FELICIANO — ESTÉTICA AVANÇADA', pageWidth / 2, 14, { align: 'center' });
+  doc.setFontSize(8);
+  doc.text('TERMO OFICIAL DE ADESÃO & CONSENTIMENTO — BLACK FRIDAY 2026', pageWidth / 2, logoEmbedded ? 25 : 16, { align: 'center' });
 
-  doc.setTextColor(255, 255, 255);
+  doc.setTextColor(200, 210, 225);
   doc.setFont('helvetica', 'normal');
-  doc.setFontSize(9);
-  doc.text('TERMO DE ADESÃO, CIÊNCIA & CONSENTIMENTO — BLACK FRIDAY 2026', pageWidth / 2, 22, { align: 'center' });
+  doc.setFontSize(7);
+  doc.text('ESTÉTICA AVANÇADA • PROCEDIMENTOS BIOMÉDICOS • VALIDADE VINCULADA AO EXERCÍCIO DE 2026', pageWidth / 2, logoEmbedded ? 30 : 22, { align: 'center' });
 
-  let y = 42;
+  let y = 44;
 
   // Document ID snippet at top right
   doc.setFontSize(7.5);
@@ -189,14 +202,14 @@ export async function generateContractPDF({
   doc.addPage();
 
   // Dark modern header for audit sheet
-  doc.setFillColor(15, 23, 42); // slate 900
+  doc.setFillColor(7, 9, 14); // #07090E
   doc.rect(0, 0, pageWidth, 32, 'F');
-  doc.setFillColor(212, 175, 55);
+  doc.setFillColor(203, 182, 139); // Champagne Gold #CBB68B
   doc.rect(0, 31, pageWidth, 1.5, 'F');
 
-  doc.setTextColor(212, 175, 55);
+  doc.setTextColor(203, 182, 139);
   doc.setFont('helvetica', 'bold');
-  doc.setFontSize(13);
+  doc.setFontSize(12.5);
   doc.text('TRILHA DE AUDITORIA DIGITAL & CERTIFICADO DE INTEGRIDADE', pageWidth / 2, 14, { align: 'center' });
 
   doc.setTextColor(255, 255, 255);
