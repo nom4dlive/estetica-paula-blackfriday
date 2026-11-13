@@ -1,7 +1,6 @@
 import React from 'react';
 import { Check, ArrowRight, Sparkles } from 'lucide-react';
 import { formatCurrency } from '../utils/masks';
-import { stitchAssets } from '../assets/stitch/index.js';
 
 export default function PackageCard({ pkg, isSelected, onSelect }) {
   const savings = pkg.originalPrice - pkg.pixPrice;
@@ -23,9 +22,6 @@ export default function PackageCard({ pkg, isSelected, onSelect }) {
             src={pkg.image}
             alt={pkg.title}
             className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-            onError={(e) => {
-              e.target.src = stitchAssets.treatment02; // bundled fallback
-            }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0A0D16] via-transparent to-black/40" />
 

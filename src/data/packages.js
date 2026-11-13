@@ -1,4 +1,9 @@
-import { stitchAssets } from '../assets/stitch/index.js';
+import bioestimuladorImg from '../assets/protocol_bioestimulador.jpg';
+import botoxImg from '../assets/protocol_botox.jpg';
+import liporeducttImg from '../assets/protocol_liporeductt.jpg';
+import criolipoliseImg from '../assets/protocol_criolipolise.jpg';
+import bodyHarmonyImg from '../assets/protocol_bodyharmony.jpg';
+import gluteoImg from '../assets/protocol_gluteo.jpg';
 
 export const PACKAGES = [
   {
@@ -14,7 +19,7 @@ export const PACKAGES = [
       value: 98.00,
       total: 980.00,
     },
-    image: stitchAssets.bioestimulador,
+    image: bioestimuladorImg,
     category: 'Facial',
     sessions: '1 Sessão de Alta Densidade',
     benefits: [
@@ -29,7 +34,7 @@ export const PACKAGES = [
   {
     id: 'botox',
     title: 'Toxina Botulínica (Botox) Terço Superior',
-    tagline: 'Testa sem marcas, expressão natural (Retoque condicional avaliado clinicamente)',
+    tagline: 'Testa sem marcas, expressão natural (Retoque se houver necessidade clínica)',
     badge: 'Exclusivo 5 Primeiras',
     badgeColor: 'bg-red-500/20 text-red-300 border-red-500/40',
     originalPrice: 999,
@@ -39,7 +44,7 @@ export const PACKAGES = [
       value: 98.00,
       total: 980.00,
     },
-    image: stitchAssets.botox,
+    image: botoxImg,
     category: 'Facial',
     sessions: 'Aplicação Completa + Avaliação de Retoque',
     benefits: [
@@ -64,7 +69,7 @@ export const PACKAGES = [
       value: 96.98,
       total: 969.80,
     },
-    image: stitchAssets.liporeductt,
+    image: liporeducttImg,
     category: 'Corporal',
     sessions: '16 Sessões Potencializadas',
     benefits: [
@@ -90,7 +95,7 @@ export const PACKAGES = [
       value: 110.00,
       total: 1100.00,
     },
-    image: stitchAssets.criolipolise,
+    image: criolipoliseImg,
     category: 'Corporal',
     sessions: 'Protocolo Abdômen Total',
     benefits: [
@@ -115,7 +120,7 @@ export const PACKAGES = [
       value: 135.00,
       total: 1350.00,
     },
-    image: stitchAssets.bodyHarmony,
+    image: bodyHarmonyImg,
     category: 'Corporal',
     sessions: '5 Sessões Intensivas de Campo Eletromagnético',
     benefits: [
@@ -140,7 +145,7 @@ export const PACKAGES = [
       value: 245.00,
       total: 2450.00,
     },
-    image: stitchAssets.gluteoVip,
+    image: gluteoImg,
     category: 'VIP',
     sessions: 'Protocolo Completo de Harmonização',
     benefits: [

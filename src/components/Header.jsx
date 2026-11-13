@@ -2,7 +2,7 @@ import React from 'react';
 import { Sparkles, MessageCircle } from 'lucide-react';
 import { CLINIC_PHONE } from '../utils/whatsapp';
 import PaulaLogo from './brand/PaulaLogo';
-import { stitchAssets } from '../assets/stitch/index.js';
+import paulaAvatar from '../assets/paula_avatar.jpg';
 
 export default function Header({ onSelectPackageClick }) {
   return (
@@ -19,9 +19,9 @@ export default function Header({ onSelectPackageClick }) {
           {/* Dra. Paula Circular Portrait */}
           <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-[#D4AF37] overflow-hidden bg-slate-900 shadow-md shadow-[#D4AF37]/20 shrink-0">
             <img
-              src={stitchAssets.doctorAvatar}
+              src={paulaAvatar}
               alt="Dra. Paula Feliciano"
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-cover object-center"
             />
           </div>
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ShieldCheck, Clock, CheckCircle2, Award, ArrowDown, Sparkles } from 'lucide-react';
 import PaulaEmblem from './brand/PaulaEmblem';
-import { stitchAssets } from '../assets/stitch/index.js';
+import paulaHero from '../assets/paula_hero.jpg';
 
 export default function Hero({ onExploreClick }) {
   // Countdown timer locked strictly to Sunday 15/11/2026 23:59:59 BRT
@@ -132,7 +132,7 @@ export default function Hero({ onExploreClick }) {
                 {/* Photo container */}
                 <div className="relative h-80 sm:h-96 w-full rounded-2xl overflow-hidden bg-[#0A0D16]">
                   <img
-                    src={stitchAssets.heroPortrait}
+                    src={paulaHero}
                     alt="Dra. Paula Feliciano - Estética Avançada"
                     className="w-full h-full object-cover object-top"
                   />
