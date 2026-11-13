@@ -12,7 +12,7 @@ export const PACKAGES = [
       value: 98.00,
       total: 980.00,
     },
-    image: '/assets/img_2b66.jpg',
+    image: './assets/img_2b66.jpg',
     category: 'Facial',
     sessions: '1 Sessão de Alta Densidade',
     benefits: [
@@ -37,7 +37,7 @@ export const PACKAGES = [
       value: 98.00,
       total: 980.00,
     },
-    image: '/assets/img_botox_6b01.jpg',
+    image: './assets/img_botox_6b01.jpg',
     category: 'Facial',
     sessions: 'Aplicação Completa + Retoque (se necessário)',
     benefits: [
@@ -62,7 +62,7 @@ export const PACKAGES = [
       value: 96.98,
       total: 969.80,
     },
-    image: '/assets/img_0a1b.jpg',
+    image: './assets/img_0a1b.jpg',
     category: 'Corporal',
     sessions: '16 Sessões Potencializadas',
     benefits: [
@@ -88,7 +88,7 @@ export const PACKAGES = [
       value: 110.00,
       total: 1100.00,
     },
-    image: '/assets/img_5e38.jpg',
+    image: './assets/img_5e38.jpg',
     category: 'Corporal',
     sessions: 'Protocolo Abdômen Total',
     benefits: [
@@ -113,7 +113,7 @@ export const PACKAGES = [
       value: 135.00,
       total: 1350.00,
     },
-    image: '/assets/img_b62c.jpg',
+    image: './assets/img_b62c.jpg',
     category: 'Corporal',
     sessions: '5 Sessões Intensivas de Campo Eletromagnético',
     benefits: [
@@ -138,7 +138,7 @@ export const PACKAGES = [
       value: 245.00,
       total: 2450.00,
     },
-    image: '/assets/img2.jpg',
+    image: './assets/img_gluteo_6908.jpg',
     category: 'VIP',
     sessions: 'Protocolo Completo de Harmonização',
     benefits: [

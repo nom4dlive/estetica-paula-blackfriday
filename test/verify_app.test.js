@@ -34,7 +34,7 @@ PACKAGES.forEach((pkg) => {
   assert.ok(pkg.benefits.length >= 4, `Pacote deve ter pelo menos 4 benefícios listados`);
   
   // Verify image file exists
-  const imageDiskPath = path.join(rootDir, 'public', pkg.image.replace(/^\//, ''));
+  const imageDiskPath = path.join(rootDir, 'public', pkg.image.replace(/^\.?\//, ''));
   assert.ok(fs.existsSync(imageDiskPath), `Arquivo de imagem não encontrado no disco: ${imageDiskPath}`);
 });
 console.log('✅ Catálogo de 6 pacotes 100% íntegro e imagens validadas no disco!\n');
