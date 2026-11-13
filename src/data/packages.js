@@ -1,10 +1,12 @@
+import { stitchAssets } from '../assets/stitch/index.js';
+
 export const PACKAGES = [
   {
     id: 'bioestimulador',
     title: 'Bioestimulador de Colágeno Facial',
     tagline: 'Rejuvenesça sua pele, recupere a firmeza e a beleza natural!',
     badge: 'Destaque Facial',
-    badgeColor: 'bg-champagne-500/20 text-champagne-300 border-champagne-500/30',
+    badgeColor: 'bg-amber-500/20 text-[#FFDF73] border-[#D4AF37]/40',
     originalPrice: 1599,
     pixPrice: 799,
     installments: {
@@ -12,7 +14,7 @@ export const PACKAGES = [
       value: 98.00,
       total: 980.00,
     },
-    image: './assets/stitch/stitch_00_78a34f7ff7.jpg',
+    image: stitchAssets.bioestimulador,
     category: 'Facial',
     sessions: '1 Sessão de Alta Densidade',
     benefits: [
@@ -27,9 +29,9 @@ export const PACKAGES = [
   {
     id: 'botox',
     title: 'Toxina Botulínica (Botox) Terço Superior',
-    tagline: 'Testa sem marcas, expressão natural (Retoque se houver necessidade)',
+    tagline: 'Testa sem marcas, expressão natural (Retoque condicional avaliado clinicamente)',
     badge: 'Exclusivo 5 Primeiras',
-    badgeColor: 'bg-rose-500/20 text-rose-300 border-rose-500/30',
+    badgeColor: 'bg-red-500/20 text-red-300 border-red-500/40',
     originalPrice: 999,
     pixPrice: 799,
     installments: {
@@ -37,14 +39,14 @@ export const PACKAGES = [
       value: 98.00,
       total: 980.00,
     },
-    image: './assets/stitch/stitch_16_857f76bcf6.jpg',
+    image: stitchAssets.botox,
     category: 'Facial',
     sessions: 'Aplicação Completa + Avaliação de Retoque',
     benefits: [
       'Região da testa completa (músculo frontal)',
       'Glabela (rugas de preocupação entre sobrancelhas)',
       'Área dos olhos (pés de galinha / orbicular)',
-      'Aplicação com microagulhas e técnica indolor',
+      'Aplicação com microagulhas e técnica suave',
       'Retoque entre 15 e 21 dias estritamente se houver necessidade clínica avaliada pela Dra. Paula',
     ],
     urgencyText: 'Válido rigorosamente para as 5 primeiras assinaturas',
@@ -52,9 +54,9 @@ export const PACKAGES = [
   {
     id: 'liporeductt',
     title: 'Protocolo Liporeductt — 16 Sessões',
-    tagline: 'Reduza medidas e modele seu corpo! O terror da gordura localizada',
+    tagline: 'Reduza medidas e modele seu corpo! Combate intensivo à gordura localizada',
     badge: 'Mais Vendido',
-    badgeColor: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
+    badgeColor: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40',
     originalPrice: 1499,
     pixPrice: 789,
     installments: {
@@ -62,12 +64,12 @@ export const PACKAGES = [
       value: 96.98,
       total: 969.80,
     },
-    image: './assets/stitch/stitch_11_e771ca8391.jpg',
+    image: stitchAssets.liporeductt,
     category: 'Corporal',
     sessions: '16 Sessões Potencializadas',
     benefits: [
       '4x Sessões de Hidrolipoclasia Não Aspirativa',
-      '4x Sessões de Carboxiterapia Médica',
+      '4x Sessões de Carboxiterapia Estética',
       '4x Sessões de Lipocavitação Focalizada',
       '4x Sessões de Eletrolipólise Avançada',
       'Redução de gordura localizada e modelagem do contorno',
@@ -80,7 +82,7 @@ export const PACKAGES = [
     title: 'Harmonização Corporal Criolipólise',
     tagline: 'Congelamento seletivo e destruição definitiva de adipócitos',
     badge: 'Maior Desconto (-75%)',
-    badgeColor: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30',
+    badgeColor: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40',
     originalPrice: 3600,
     pixPrice: 899,
     installments: {
@@ -88,7 +90,7 @@ export const PACKAGES = [
       value: 110.00,
       total: 1100.00,
     },
-    image: './assets/stitch/stitch_10_a1246c8558.jpg',
+    image: stitchAssets.criolipolise,
     category: 'Corporal',
     sessions: 'Protocolo Abdômen Total',
     benefits: [
@@ -105,7 +107,7 @@ export const PACKAGES = [
     title: 'Body Harmony — 5 Sessões',
     tagline: 'Tonifique seu corpo, conquiste seus resultados!',
     badge: 'Alta Performance',
-    badgeColor: 'bg-purple-500/20 text-purple-300 border-purple-500/30',
+    badgeColor: 'bg-purple-500/20 text-purple-300 border-purple-500/40',
     originalPrice: 1800,
     pixPrice: 1099,
     installments: {
@@ -113,7 +115,7 @@ export const PACKAGES = [
       value: 135.00,
       total: 1350.00,
     },
-    image: './assets/stitch/stitch_15_c3d025ac53.jpg',
+    image: stitchAssets.bodyHarmony,
     category: 'Corporal',
     sessions: '5 Sessões Intensivas de Campo Eletromagnético',
     benefits: [
@@ -130,7 +132,7 @@ export const PACKAGES = [
     title: 'Harmonização Glútea VIP',
     tagline: 'Bioestimulador de Colágeno + Subincisão • Resgate sua autoestima!',
     badge: 'Protocolo VIP',
-    badgeColor: 'bg-gradient-to-r from-champagne-500/30 to-amber-500/30 text-champagne-200 border-champagne-400/40',
+    badgeColor: 'bg-gradient-to-r from-amber-500/30 to-red-500/30 text-[#FFDF73] border-[#D4AF37]/50',
     originalPrice: 3700,
     pixPrice: 1999,
     installments: {
@@ -138,7 +140,7 @@ export const PACKAGES = [
       value: 245.00,
       total: 2450.00,
     },
-    image: './assets/stitch/stitch_05_add66f8b6b.jpg',
+    image: stitchAssets.gluteoVip,
     category: 'VIP',
     sessions: 'Protocolo Completo de Harmonização',
     benefits: [
