@@ -14,10 +14,10 @@ export default function PaymentSelector({ selectedPackage, paymentMethod, onSele
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <label className="text-xs font-semibold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
-          <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+          <Sparkles className="w-3.5 h-3.5 text-[#FFDF73]" />
           Forma de Pagamento Desejada:
         </label>
-        <span className="text-[11px] text-amber-400/90 font-medium">
+        <span className="text-[11px] text-[#FFDF73]/90 font-medium">
           Escolha uma opção
         </span>
       </div>
@@ -66,29 +66,29 @@ export default function PaymentSelector({ selectedPackage, paymentMethod, onSele
           onClick={() => onSelectPaymentMethod('credit')}
           className={`relative p-4 rounded-2xl border cursor-pointer transition-all ${
             isCredit
-              ? 'bg-amber-950/40 border-amber-500 shadow-lg shadow-amber-900/20 ring-1 ring-amber-500'
-              : 'bg-slate-900/80 border-slate-800 hover:border-slate-700'
+              ? 'bg-[#151206]/80 border-[#D4AF37] shadow-lg shadow-[#D4AF37]/20 ring-1 ring-[#D4AF37]'
+              : 'bg-[#0A0D16] border-[#D4AF37]/20 hover:border-[#D4AF37]/50'
           }`}
         >
           {/* Badge */}
           <div className="flex items-center justify-between mb-2">
-            <span className="inline-flex items-center gap-1 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">
+            <span className="inline-flex items-center gap-1 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-[#D4AF37]/20 text-[#FFDF73] border border-[#D4AF37]/40">
               Link Maquininha Segura
             </span>
             {isCredit && (
-              <div className="w-5 h-5 rounded-full bg-amber-500 text-black flex items-center justify-center">
+              <div className="w-5 h-5 rounded-full bg-gradient-to-r from-[#FFDF73] to-[#D4AF37] text-black flex items-center justify-center">
                 <Check className="w-3.5 h-3.5 stroke-[3]" />
               </div>
             )}
           </div>
 
           <div className="flex items-start gap-3">
-            <div className="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0 mt-0.5">
+            <div className="w-9 h-9 rounded-xl bg-[#D4AF37]/15 border border-[#D4AF37]/35 flex items-center justify-center text-[#FFDF73] shrink-0 mt-0.5">
               <CreditCard className="w-5 h-5" />
             </div>
             <div>
               <p className="text-sm font-bold text-white">Cartão de Crédito</p>
-              <p className="text-xl font-extrabold text-amber-400 mt-0.5">
+              <p className="text-xl font-extrabold text-[#FFDF73] mt-0.5">
                 {selectedPackage.installments.count}x de {formatCurrency(selectedPackage.installments.value)}
               </p>
               <p className="text-[11px] text-slate-400 mt-1">

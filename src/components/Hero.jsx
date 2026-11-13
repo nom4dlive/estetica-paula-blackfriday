@@ -126,46 +126,30 @@ export default function Hero({ onExploreClick }) {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-sm sm:max-w-md">
               {/* Outer decorative glow */}
-              <div className="absolute -inset-1 bg-gradient-to-tr from-red-600/30 via-[#D4AF37]/20 to-transparent rounded-3xl blur-lg" />
+              <div className="absolute -inset-1 bg-gradient-to-tr from-red-600/25 via-[#D4AF37]/20 to-transparent rounded-3xl blur-xl pointer-events-none" />
 
-              <div className="relative bg-[#07090E] border border-[#D4AF37]/40 rounded-3xl p-3 sm:p-4 shadow-2xl overflow-hidden">
-                {/* Photo container */}
-                <div className="relative h-80 sm:h-96 w-full rounded-2xl overflow-hidden bg-[#0A0D16]">
+              <div className="relative bg-[#07090E] border border-[#D4AF37]/40 rounded-3xl p-3 sm:p-3.5 shadow-2xl overflow-hidden group">
+                {/* Photo container - spacious & uncluttered portrait */}
+                <div className="relative h-96 sm:h-[440px] w-full rounded-2xl overflow-hidden bg-[#0A0D16]">
                   <img
                     src={paulaHero}
-                    alt="Dra. Paula Feliciano - Estética Avançada"
-                    className="w-full h-full object-cover object-top"
+                    alt="Dra. Paula Feliciano - Estética Facial & Corporal"
+                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
-                  
-                  {/* Top Badge: Vagas 2026 Abertas */}
-                  <div className="absolute top-3 left-3 backdrop-blur-md bg-black/80 border border-[#D4AF37]/40 px-3 py-1.5 rounded-lg flex items-center gap-2 shadow-xl">
-                    <span className="w-2 h-2 rounded-full bg-red-500 animate-ping" />
-                    <span className="text-[10px] font-black tracking-widest text-[#FFDF73] uppercase">Vagas 2026 Abertas</span>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent pointer-events-none" />
 
                   {/* Floating Doctor Showcase Footer */}
-                  <div className="absolute bottom-3 inset-x-3 backdrop-blur-xl bg-[#080B12]/95 border border-[#D4AF37]/40 p-3.5 rounded-2xl flex items-center justify-between shadow-2xl">
+                  <div className="absolute bottom-3 inset-x-3 backdrop-blur-md bg-[#080B12]/90 border border-[#D4AF37]/40 p-3 rounded-xl flex items-center justify-between shadow-2xl">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/40 flex items-center justify-center shrink-0">
                         <PaulaEmblem className="w-6 h-6" goldColor="#D4AF37" />
                       </div>
                       <div>
-                        <p className="text-white text-xs sm:text-sm font-bold font-serif">Dra. Paula Feliciano</p>
-                        <p className="text-[#D4AF37] text-[10px] tracking-wider uppercase font-semibold">Estética Facial &amp; Corporal</p>
+                        <p className="text-white text-sm font-bold font-serif leading-snug">Dra. Paula Feliciano</p>
+                        <p className="text-[#FFDF73] text-[11px] tracking-wider uppercase font-semibold">Estética Facial &amp; Corporal</p>
                       </div>
                     </div>
                   </div>
-                </div>
-
-                {/* Important Contract Rule Banner */}
-                <div className="mt-3 bg-red-950/20 border border-red-500/25 rounded-xl p-3 text-center">
-                  <p className="text-[11px] text-[#FFDF73] font-bold leading-tight flex items-center justify-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-red-400" />
-                    Regra Oficial Black Friday:
-                  </p>
-                  <p className="text-[10px] text-slate-300 mt-0.5">
-                    Condições exclusivas para sessões realizadas ainda ao longo do ano de 2026.
-                  </p>
                 </div>
               </div>
             </div>

@@ -177,33 +177,33 @@ export default function App() {
             
             {/* Step header */}
             <div className="text-center space-y-2">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 text-amber-300 text-xs font-semibold border border-amber-500/20">
+              <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#D4AF37]/15 text-[#FFDF73] text-xs font-semibold border border-[#D4AF37]/35 shadow-sm">
                 <FileSignature className="w-3.5 h-3.5" />
                 ETAPA FINAL: FORMALIZAÇÃO & ASSINATURA DIGITAL
               </div>
               <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white">
                 Contrato de Prestação de Serviços Estéticos
               </h2>
-              <p className="text-slate-400 text-xs sm:text-sm max-w-lg mx-auto">
+              <p className="text-slate-300 text-xs sm:text-sm max-w-lg mx-auto">
                 Preencha seus dados cadastrais, confira o termo oficial com vigência estrita em 2026 e assine com o dedo no celular.
               </p>
             </div>
 
             {/* Selected Package Highlight Box */}
-            <div className="bg-[#101623] border border-amber-500/30 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
+            <div className="bg-[#0A0D16] border border-[#D4AF37]/35 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
               <div className="flex items-center gap-4">
-                <div className="w-16 h-16 rounded-xl overflow-hidden bg-slate-800 shrink-0 border border-amber-500/20">
+                <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-[#05070B] shrink-0 border border-[#D4AF37]/30">
                   <img
                     src={selectedPackage.image}
                     alt={selectedPackage.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-bold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">
+                  <span className="text-[10px] uppercase font-bold text-[#FFDF73] bg-[#D4AF37]/20 px-2 py-0.5 rounded border border-[#D4AF37]/35">
                     Pacote Selecionado
                   </span>
-                  <h3 className="text-base sm:text-lg font-serif font-bold text-white mt-0.5">
+                  <h3 className="text-base sm:text-lg font-serif font-bold text-white mt-1">
                     {selectedPackage.title}
                   </h3>
                   <p className="text-xs text-slate-400">
@@ -212,7 +212,7 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="text-right sm:border-l sm:border-slate-800 sm:pl-5 w-full sm:w-auto flex sm:flex-col justify-between items-center sm:items-end">
+              <div className="text-right sm:border-l sm:border-[#D4AF37]/20 sm:pl-5 w-full sm:w-auto flex sm:flex-col justify-between items-center sm:items-end">
                 <div>
                   <span className="text-[11px] text-slate-400 line-through block">
                     De {formatCurrency(selectedPackage.originalPrice)}
@@ -228,7 +228,7 @@ export default function App() {
                   onClick={() => {
                     document.getElementById('pacotes')?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="text-xs text-amber-400 hover:text-amber-300 font-semibold underline mt-1"
+                  className="text-xs text-[#FFDF73] hover:text-white font-semibold underline mt-1 cursor-pointer"
                 >
                   Trocar pacote
                 </button>
@@ -236,7 +236,7 @@ export default function App() {
             </div>
 
             {/* Checkout Form */}
-            <form onSubmit={handleSubmit} className="space-y-8 bg-[#0B0F17]/90 border border-slate-800/80 rounded-3xl p-5 sm:p-8 shadow-2xl backdrop-blur-sm">
+            <form onSubmit={handleSubmit} className="space-y-8 bg-[#0A0D16]/95 border border-[#D4AF37]/25 rounded-3xl p-5 sm:p-8 shadow-2xl backdrop-blur-sm">
               
               {/* Step 2: Payment Method */}
               <PaymentSelector
@@ -283,11 +283,11 @@ export default function App() {
 
               {/* Validation Summary if any error */}
               {Object.keys(errors).length > 0 && (
-                <div className="bg-rose-950/30 border border-rose-500/40 rounded-xl p-3.5 flex items-start gap-2.5 text-xs text-rose-300">
-                  <AlertCircle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
+                <div className="bg-red-950/40 border border-red-500/50 rounded-xl p-3.5 flex items-start gap-2.5 text-xs text-red-300">
+                  <AlertCircle className="w-4 h-4 text-red-400 shrink-0 mt-0.5" />
                   <div>
                     <p className="font-bold">Atenção para concluir a formalização:</p>
-                    <ul className="list-disc pl-4 mt-1 space-y-0.5 text-[11px] text-rose-300/90">
+                    <ul className="list-disc pl-4 mt-1 space-y-0.5 text-[11px] text-red-300/90">
                       {Object.values(errors).map((err, i) => (
                         <li key={i}>{err}</li>
                       ))}
@@ -300,10 +300,10 @@ export default function App() {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-extrabold text-sm sm:text-base tracking-wide transition-all shadow-xl shadow-amber-500/20 transform hover:-translate-y-0.5 flex items-center justify-center gap-2 group cursor-pointer"
+                  className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#FFDF73] via-[#D4AF37] to-[#B38F24] hover:brightness-110 text-black font-black text-sm sm:text-base tracking-wider uppercase transition-all shadow-xl shadow-[#D4AF37]/25 transform hover:-translate-y-0.5 flex items-center justify-center gap-2 group cursor-pointer tap-luxury"
                 >
                   <Lock className="w-5 h-5 group-hover:scale-105 transition-transform" />
-                  <span>ASSINAR DIGITALMENTE & GARANTIR CONDIÇÃO BLACK FRIDAY</span>
+                  <span>ASSINAR DIGITALMENTE &amp; GARANTIR CONDIÇÃO BLACK FRIDAY</span>
                 </button>
 
                 <p className="text-center text-[11px] text-slate-400 mt-2.5 flex items-center justify-center gap-1.5">

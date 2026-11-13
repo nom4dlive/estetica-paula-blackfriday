@@ -17,38 +17,38 @@ export default function PackageCard({ pkg, isSelected, onSelect }) {
     >
       {/* Top Image & Badges */}
       <div>
-        <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-[#05070B]">
+        <div className="relative h-72 sm:h-84 w-full overflow-hidden bg-[#05070B] group">
           <img
             src={pkg.image}
             alt={pkg.title}
-            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0D16] via-transparent to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0D16] via-transparent to-black/30 pointer-events-none" />
 
           {/* Promotional Tag */}
-          <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
-            <span className={`px-2.5 py-1 rounded-full text-[11px] font-bold border backdrop-blur-md shadow-sm ${pkg.badgeColor}`}>
+          <div className="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+            <span className={`px-2.5 py-1 rounded-full text-[11px] font-bold border backdrop-blur-md shadow-md ${pkg.badgeColor}`}>
               {pkg.badge}
             </span>
-            <span className="px-2 py-1 rounded-full text-[10px] font-extrabold bg-red-600 text-white shadow-sm">
+            <span className="px-2.5 py-1 rounded-full text-[10px] font-black bg-red-600 text-white shadow-md">
               -{discountPercent}%
             </span>
           </div>
 
           {/* Selected marker */}
           {isSelected && (
-            <div className="absolute top-3 right-3 bg-gradient-to-r from-[#FFDF73] to-[#D4AF37] text-black px-2.5 py-1 rounded-full text-[11px] font-black flex items-center gap-1 shadow-lg">
+            <div className="absolute top-3 right-3 bg-gradient-to-r from-[#FFDF73] to-[#D4AF37] text-black px-3 py-1 rounded-full text-[11px] font-black flex items-center gap-1 shadow-xl z-10 animate-pulse">
               <Check className="w-3.5 h-3.5 stroke-[3]" />
               SELECIONADO
             </div>
           )}
 
           {/* Category & Session label */}
-          <div className="absolute bottom-2 left-3 right-3 flex items-center justify-between text-xs text-slate-300">
-            <span className="bg-black/75 backdrop-blur-sm px-2.5 py-0.5 rounded text-[11px] font-bold text-[#FFDF73] border border-[#D4AF37]/40">
+          <div className="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-xs text-slate-300 z-10">
+            <span className="bg-black/80 backdrop-blur-md px-2.5 py-0.5 rounded text-[11px] font-bold text-[#FFDF73] border border-[#D4AF37]/40 shadow-sm">
               {pkg.category}
             </span>
-            <span className="bg-black/75 backdrop-blur-sm px-2.5 py-0.5 rounded text-[11px] font-medium text-slate-200">
+            <span className="bg-black/80 backdrop-blur-md px-2.5 py-0.5 rounded text-[11px] font-medium text-slate-200 border border-white/10 shadow-sm">
               {pkg.sessions}
             </span>
           </div>
@@ -66,12 +66,12 @@ export default function PackageCard({ pkg, isSelected, onSelect }) {
           </div>
 
           {/* Price Box */}
-          <div className="bg-[#05070B] border border-[#D4AF37]/25 rounded-2xl p-3.5 space-y-1.5 shadow-inner">
+          <div className="bg-[#05070B] border border-[#D4AF37]/25 rounded-2xl p-3.5 space-y-2 shadow-inner">
             <div className="flex items-center justify-between">
               <span className="text-xs text-slate-400 line-through">
                 De {formatCurrency(pkg.originalPrice)}
               </span>
-              <span className="text-[11px] text-emerald-400 font-bold bg-emerald-950/70 border border-emerald-500/30 px-2 py-0.5 rounded">
+              <span className="text-[11px] text-[#FFDF73] font-bold bg-[#D4AF37]/15 border border-[#D4AF37]/35 px-2 py-0.5 rounded">
                 Economia de {formatCurrency(savings)}
               </span>
             </div>
@@ -87,7 +87,7 @@ export default function PackageCard({ pkg, isSelected, onSelect }) {
             </div>
 
             {/* Installments Option */}
-            <div className="pt-1 border-t border-slate-800 flex items-center justify-between text-xs text-slate-300">
+            <div className="pt-1.5 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-300">
               <span className="text-slate-400 font-medium">Ou no Cartão:</span>
               <span className="font-bold text-[#FFDF73]">
                 {pkg.installments.count}x de {formatCurrency(pkg.installments.value)}

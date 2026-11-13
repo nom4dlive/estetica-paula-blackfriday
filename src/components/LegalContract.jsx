@@ -6,29 +6,29 @@ export default function LegalContract({ agreed, setAgreed, error }) {
     <div className="space-y-3.5">
       <div className="flex items-center justify-between">
         <label className="text-xs font-semibold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
-          <FileText className="w-3.5 h-3.5 text-amber-400" />
-          Termo de Adesão & Regras Oficiais:
+          <FileText className="w-3.5 h-3.5 text-[#FFDF73]" />
+          Termo de Adesão &amp; Regras Oficiais:
         </label>
-        <span className="text-[11px] text-amber-400/90 font-medium">
+        <span className="text-[11px] text-[#FFDF73]/90 font-medium">
           Leitura Obrigatória
         </span>
       </div>
 
       {/* Contract Scroll Box */}
-      <div className="bg-[#07090E] border border-slate-800 rounded-2xl p-4 sm:p-5 max-h-56 overflow-y-auto space-y-3 text-xs text-slate-300 leading-relaxed font-sans shadow-inner">
-        <div className="border-b border-slate-800/80 pb-2">
+      <div className="bg-[#05070B] border border-[#D4AF37]/30 rounded-2xl p-4 sm:p-5 max-h-56 overflow-y-auto space-y-3 text-xs text-slate-300 leading-relaxed font-sans shadow-inner">
+        <div className="border-b border-[#D4AF37]/20 pb-2">
           <p className="font-bold text-white text-xs uppercase tracking-wide">
             INSTRUMENTO PARTICULAR DE ADESÃO A PROTOCOLOS ESTÉTICOS — BLACK FRIDAY 2026
           </p>
-          <p className="text-[10px] text-amber-400/80 mt-0.5">
-            Dra. Paula Feliciano — Estética Avançada • Procedimentos Estéticos
+          <p className="text-[10px] text-[#FFDF73]/80 mt-0.5">
+            Dra. Paula Feliciano — Estética Facial &amp; Corporal • Procedimentos Estéticos
           </p>
         </div>
 
         {/* Rule 1 Highlight */}
-        <div className="bg-amber-500/10 border-l-2 border-amber-500 p-2.5 rounded-r-lg space-y-1">
-          <p className="font-bold text-amber-300 text-[11px] flex items-center gap-1">
-            <Clock className="w-3.5 h-3.5" />
+        <div className="bg-[#D4AF37]/10 border-l-2 border-[#D4AF37] p-2.5 rounded-r-lg space-y-1">
+          <p className="font-bold text-[#FFDF73] text-[11px] flex items-center gap-1">
+            <Clock className="w-3.5 h-3.5 text-[#D4AF37]" />
             CLÁUSULA 1ª — DA VIGÊNCIA E REALIZAÇÃO OBRIGATÓRIA EM 2026
           </p>
           <p className="text-[11px] text-slate-200">
@@ -37,9 +37,9 @@ export default function LegalContract({ agreed, setAgreed, error }) {
         </div>
 
         {/* Rule 2 Highlight */}
-        <div className="bg-slate-900/90 border-l-2 border-slate-700 p-2.5 rounded-r-lg space-y-1">
+        <div className="bg-[#0A0D16] border-l-2 border-slate-700 p-2.5 rounded-r-lg space-y-1">
           <p className="font-bold text-slate-200 text-[11px] flex items-center gap-1">
-            <ShieldAlert className="w-3.5 h-3.5 text-amber-400" />
+            <ShieldAlert className="w-3.5 h-3.5 text-[#FFDF73]" />
             CLÁUSULA 2ª — POLÍTICA DE AGENDAMENTO E AVISO PRÉVIO DE 24 HORAS
           </p>
           <p className="text-[11px] text-slate-300">
@@ -73,18 +73,18 @@ export default function LegalContract({ agreed, setAgreed, error }) {
         onClick={() => setAgreed(!agreed)}
         className={`p-3.5 rounded-xl border cursor-pointer transition-all flex items-start gap-3 select-none ${
           agreed
-            ? 'bg-amber-950/20 border-amber-500/60 ring-1 ring-amber-500/30'
+            ? 'bg-[#151206]/80 border-[#D4AF37] ring-1 ring-[#D4AF37]/50'
             : error
-            ? 'bg-rose-950/20 border-rose-500'
-            : 'bg-slate-900/70 border-slate-800 hover:border-slate-700'
+            ? 'bg-red-950/20 border-red-500'
+            : 'bg-[#0A0D16] border-[#D4AF37]/20 hover:border-[#D4AF37]/50'
         }`}
       >
         <button
           type="button"
-          className="mt-0.5 text-amber-400 focus:outline-none"
+          className="mt-0.5 text-[#FFDF73] focus:outline-none"
         >
           {agreed ? (
-            <CheckSquare className="w-5 h-5 fill-amber-500 text-black" />
+            <CheckSquare className="w-5 h-5 fill-[#D4AF37] text-black" />
           ) : (
             <Square className="w-5 h-5 text-slate-500" />
           )}
@@ -101,7 +101,7 @@ export default function LegalContract({ agreed, setAgreed, error }) {
       </div>
 
       {error && (
-        <p className="text-[11px] text-rose-400 flex items-center gap-1 pl-1">
+        <p className="text-[11px] text-red-400 flex items-center gap-1 pl-1">
           <AlertCircle className="w-3 h-3" /> {error}
         </p>
       )}

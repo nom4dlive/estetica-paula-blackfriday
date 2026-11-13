@@ -11,7 +11,7 @@ export const PACKAGES = [
     title: 'Bioestimulador de Colágeno Facial',
     tagline: 'Rejuvenesça sua pele, recupere a firmeza e a beleza natural!',
     badge: 'Destaque Facial',
-    badgeColor: 'bg-amber-500/20 text-[#FFDF73] border-[#D4AF37]/40',
+    badgeColor: 'bg-[#D4AF37]/15 text-[#FFDF73] border-[#D4AF37]/40',
     originalPrice: 1599,
     pixPrice: 799,
     installments: {
@@ -36,7 +36,7 @@ export const PACKAGES = [
     title: 'Toxina Botulínica (Botox) Terço Superior',
     tagline: 'Testa sem marcas, expressão natural (Retoque se houver necessidade clínica)',
     badge: 'Exclusivo 5 Primeiras',
-    badgeColor: 'bg-red-500/20 text-red-300 border-red-500/40',
+    badgeColor: 'bg-red-950/60 text-red-300 border-red-500/40',
     originalPrice: 999,
     pixPrice: 799,
     installments: {
@@ -60,8 +60,8 @@ export const PACKAGES = [
     id: 'liporeductt',
     title: 'Protocolo Liporeductt — 16 Sessões',
     tagline: 'Reduza medidas e modele seu corpo! Combate intensivo à gordura localizada',
-    badge: 'Mais Vendido',
-    badgeColor: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40',
+    badge: 'Mais Procurado',
+    badgeColor: 'bg-[#D4AF37]/15 text-[#FFDF73] border-[#D4AF37]/40',
     originalPrice: 1499,
     pixPrice: 789,
     installments: {
@@ -87,7 +87,7 @@ export const PACKAGES = [
     title: 'Harmonização Corporal Criolipólise',
     tagline: 'Congelamento seletivo e destruição definitiva de adipócitos',
     badge: 'Maior Desconto (-75%)',
-    badgeColor: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40',
+    badgeColor: 'bg-red-950/60 text-red-300 border-red-500/40',
     originalPrice: 3600,
     pixPrice: 899,
     installments: {
@@ -112,7 +112,7 @@ export const PACKAGES = [
     title: 'Body Harmony — 5 Sessões',
     tagline: 'Tonifique seu corpo, conquiste seus resultados!',
     badge: 'Alta Performance',
-    badgeColor: 'bg-purple-500/20 text-purple-300 border-purple-500/40',
+    badgeColor: 'bg-[#D4AF37]/15 text-[#FFDF73] border-[#D4AF37]/40',
     originalPrice: 1800,
     pixPrice: 1099,
     installments: {
@@ -136,8 +136,8 @@ export const PACKAGES = [
     id: 'gluteo-vip',
     title: 'Harmonização Glútea VIP',
     tagline: 'Bioestimulador de Colágeno + Subincisão • Resgate sua autoestima!',
-    badge: 'Protocolo VIP',
-    badgeColor: 'bg-gradient-to-r from-amber-500/30 to-red-500/30 text-[#FFDF73] border-[#D4AF37]/50',
+    badge: 'Protocolo VIP Ouro',
+    badgeColor: 'bg-gradient-to-r from-[#D4AF37]/25 to-red-950/50 text-[#FFDF73] border-[#D4AF37]/50',
     originalPrice: 3700,
     pixPrice: 1999,
     installments: {

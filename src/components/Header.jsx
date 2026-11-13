@@ -8,9 +8,9 @@ export default function Header({ onSelectPackageClick }) {
   return (
     <header className="sticky top-0 z-50 bg-[#07090E]/95 backdrop-blur-md border-b border-[#D4AF37]/25 transition-luxury">
       {/* Top Banner */}
-      <div className="bg-gradient-to-r from-[#991B1B] via-[#DC2626] to-[#991B1B] text-white py-1.5 px-4 text-center text-xs font-bold tracking-wider shadow-sm flex items-center justify-center gap-2">
-        <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-        <span>BLACK FRIDAY VIP 2026 • Realização das sessões ainda em 2026 • Lote Limitado</span>
+      <div className="bg-gradient-to-r from-[#7F1D1D] via-[#DC2626] to-[#7F1D1D] text-white py-1 px-4 text-center text-[11px] sm:text-xs font-semibold tracking-wider shadow-sm flex items-center justify-center gap-2">
+        <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+        <span>BLACK FRIDAY VIP • Lote Oficial com Condições Exclusivas</span>
       </div>
 
       <div className="max-w-6xl mx-auto px-4 py-2.5 sm:py-3 flex items-center justify-between">

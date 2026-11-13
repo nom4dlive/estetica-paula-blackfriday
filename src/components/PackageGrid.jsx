@@ -16,14 +16,14 @@ export default function PackageGrid({ selectedPackage, onSelectPackage }) {
     <section id="pacotes" className="py-12 px-4 max-w-6xl mx-auto">
       {/* Section Header */}
       <div className="text-center space-y-3 mb-8">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 text-amber-300 text-xs font-semibold border border-amber-500/20">
+        <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#D4AF37]/15 text-[#FFDF73] text-xs font-semibold border border-[#D4AF37]/35 shadow-sm">
           <Sparkles className="w-3.5 h-3.5" />
-          ETAPA 1: ESCOLHA SEU PACOTE
+          ETAPA 1: ESCOLHA SEU PACOTE VIP
         </div>
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white">
           Os 6 Protocolos Oficiais da Black Friday
         </h2>
-        <p className="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto">
+        <p className="text-slate-300 text-xs sm:text-sm max-w-xl mx-auto">
           Valores promocionais garantidos apenas durante o lote vigente. Clique no pacote desejado para avançar para a personalização e assinatura digital.
         </p>
 
@@ -33,10 +33,10 @@ export default function PackageGrid({ selectedPackage, onSelectPackage }) {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${
+              className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer tap-luxury ${
                 activeCategory === cat
-                  ? 'bg-amber-500 text-black shadow-md shadow-amber-500/20'
-                  : 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800'
+                  ? 'bg-gradient-to-r from-[#FFDF73] to-[#D4AF37] text-black shadow-md shadow-[#D4AF37]/25 font-bold'
+                  : 'bg-[#0A0D16] text-slate-300 hover:text-white border border-[#D4AF37]/20 hover:border-[#D4AF37]/50'
               }`}
             >
               {cat}

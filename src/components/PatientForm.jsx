@@ -27,7 +27,7 @@ export default function PatientForm({ patient, setPatient, errors }) {
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <label className="text-xs font-semibold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
-          <User className="w-3.5 h-3.5 text-amber-400" />
+          <User className="w-3.5 h-3.5 text-[#FFDF73]" />
           Seus Dados Para o Contrato Oficial:
         </label>
         <span className="text-[11px] text-slate-400">Todos os campos obrigatórios</span>
@@ -48,15 +48,15 @@ export default function PatientForm({ patient, setPatient, errors }) {
               placeholder="Digite seu nome completo"
               value={patient.name}
               onChange={handleNameChange}
-              className={`w-full pl-10 pr-4 py-3 rounded-xl bg-slate-900 border text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 transition-all ${
+              className={`w-full pl-10 pr-4 py-3 rounded-xl bg-[#07090E] border text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 transition-all ${
                 errors?.name
-                  ? 'border-rose-500 focus:ring-rose-500 bg-rose-950/20'
-                  : 'border-slate-800 focus:border-amber-500 focus:ring-amber-500'
+                  ? 'border-red-500 focus:ring-red-500 bg-red-950/20'
+                  : 'border-[#D4AF37]/25 focus:border-[#D4AF37] focus:ring-[#D4AF37]'
               }`}
             />
           </div>
           {errors?.name && (
-            <p className="text-[11px] text-rose-400 flex items-center gap-1 mt-1">
+            <p className="text-[11px] text-red-400 flex items-center gap-1 mt-1">
               <AlertCircle className="w-3 h-3" /> {errors.name}
             </p>
           )}
@@ -67,7 +67,7 @@ export default function PatientForm({ patient, setPatient, errors }) {
           <div className="flex items-center justify-between">
             <label className="text-xs text-slate-300 font-medium">CPF:</label>
             {patient.cpf.length >= 14 && (
-              <span className={`text-[10px] font-semibold flex items-center gap-0.5 ${cpfValid ? 'text-emerald-400' : 'text-rose-400'}`}>
+              <span className={`text-[10px] font-semibold flex items-center gap-0.5 ${cpfValid ? 'text-emerald-400' : 'text-red-400'}`}>
                 {cpfValid ? <><CheckCircle2 className="w-3 h-3" /> CPF Válido</> : 'CPF Inválido'}
               </span>
             )}
@@ -83,15 +83,15 @@ export default function PatientForm({ patient, setPatient, errors }) {
               value={patient.cpf}
               onChange={handleCPFChange}
               maxLength={14}
-              className={`w-full pl-10 pr-4 py-3 rounded-xl bg-slate-900 border text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 transition-all font-mono ${
+              className={`w-full pl-10 pr-4 py-3 rounded-xl bg-[#07090E] border text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 transition-all font-mono ${
                 errors?.cpf
-                  ? 'border-rose-500 focus:ring-rose-500 bg-rose-950/20'
-                  : 'border-slate-800 focus:border-amber-500 focus:ring-amber-500'
+                  ? 'border-red-500 focus:ring-red-500 bg-red-950/20'
+                  : 'border-[#D4AF37]/25 focus:border-[#D4AF37] focus:ring-[#D4AF37]'
               }`}
             />
           </div>
           {errors?.cpf && (
-            <p className="text-[11px] text-rose-400 flex items-center gap-1 mt-1">
+            <p className="text-[11px] text-red-400 flex items-center gap-1 mt-1">
               <AlertCircle className="w-3 h-3" /> {errors.cpf}
             </p>
           )}
@@ -111,15 +111,15 @@ export default function PatientForm({ patient, setPatient, errors }) {
               value={patient.phone}
               onChange={handlePhoneChange}
               maxLength={15}
-              className={`w-full pl-10 pr-4 py-3 rounded-xl bg-slate-900 border text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 transition-all font-mono ${
+              className={`w-full pl-10 pr-4 py-3 rounded-xl bg-[#07090E] border text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 transition-all font-mono ${
                 errors?.phone
-                  ? 'border-rose-500 focus:ring-rose-500 bg-rose-950/20'
-                  : 'border-slate-800 focus:border-amber-500 focus:ring-amber-500'
+                  ? 'border-red-500 focus:ring-red-500 bg-red-950/20'
+                  : 'border-[#D4AF37]/25 focus:border-[#D4AF37] focus:ring-[#D4AF37]'
               }`}
             />
           </div>
           {errors?.phone && (
-            <p className="text-[11px] text-rose-400 flex items-center gap-1 mt-1">
+            <p className="text-[11px] text-red-400 flex items-center gap-1 mt-1">
               <AlertCircle className="w-3 h-3" /> {errors.phone}
             </p>
           )}
@@ -137,15 +137,15 @@ export default function PatientForm({ patient, setPatient, errors }) {
               placeholder="exemplo@gmail.com"
               value={patient.email}
               onChange={handleEmailChange}
-              className={`w-full pl-10 pr-4 py-3 rounded-xl bg-slate-900 border text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 transition-all ${
+              className={`w-full pl-10 pr-4 py-3 rounded-xl bg-[#07090E] border text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 transition-all ${
                 errors?.email
-                  ? 'border-rose-500 focus:ring-rose-500 bg-rose-950/20'
-                  : 'border-slate-800 focus:border-amber-500 focus:ring-amber-500'
+                  ? 'border-red-500 focus:ring-red-500 bg-red-950/20'
+                  : 'border-[#D4AF37]/25 focus:border-[#D4AF37] focus:ring-[#D4AF37]'
               }`}
             />
           </div>
           {errors?.email && (
-            <p className="text-[11px] text-rose-400 flex items-center gap-1 mt-1">
+            <p className="text-[11px] text-red-400 flex items-center gap-1 mt-1">
               <AlertCircle className="w-3 h-3" /> {errors.email}
             </p>
           )}

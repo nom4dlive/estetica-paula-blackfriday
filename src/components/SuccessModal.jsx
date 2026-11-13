@@ -73,12 +73,12 @@ export default function SuccessModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-lg bg-[#0B0F17] border border-[#CBB68B]/40 rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6 my-8 animate-in fade-in zoom-in-95 duration-200">
+      <div className="relative w-full max-w-lg bg-[#0A0D16] border border-[#D4AF37]/40 rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6 my-8 animate-in fade-in zoom-in-95 duration-200">
         
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-slate-400 hover:text-white p-1 rounded-lg bg-slate-900 border border-slate-800 transition-colors tap-luxury"
+          className="absolute top-4 right-4 text-slate-400 hover:text-white p-1 rounded-lg bg-[#05070B] border border-[#D4AF37]/20 transition-colors tap-luxury cursor-pointer"
         >
           <X className="w-4 h-4" />
         </button>
@@ -89,7 +89,7 @@ export default function SuccessModal({
             <PaulaLogo.Vertical
               className="w-44 sm:w-48 h-auto mx-auto"
               textColor="#F8FAFC"
-              goldColor="#CBB68B"
+              goldColor="#D4AF37"
             />
           </div>
 
@@ -97,7 +97,7 @@ export default function SuccessModal({
             <CheckCircle2 className="w-8 h-8 stroke-[2.2]" />
           </div>
 
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#CBB68B]/10 text-[#CBB68B] text-xs font-semibold border border-[#CBB68B]/25">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#D4AF37]/15 text-[#FFDF73] text-xs font-semibold border border-[#D4AF37]/35 shadow-sm">
             ✦ CONTRATO FORMALIZADO COM SUCESSO!
           </div>
 
@@ -111,7 +111,7 @@ export default function SuccessModal({
         </div>
 
         {/* Contract Summary Box */}
-        <div className="bg-[#101623] border border-slate-800 rounded-2xl p-4 space-y-3 text-xs">
+        <div className="bg-[#05070B] border border-[#D4AF37]/25 rounded-2xl p-4 space-y-3 text-xs">
           <div className="flex items-center justify-between border-b border-slate-800 pb-2">
             <span className="text-slate-400">Pacote Escolhido:</span>
             <span className="font-bold text-white text-right">{selectedPackage.title}</span>
@@ -128,12 +128,12 @@ export default function SuccessModal({
 
           <div className="flex items-center justify-between border-b border-slate-800 pb-2">
             <span className="text-slate-400">Document ID:</span>
-            <span className="font-mono text-[#E5D6BA] text-[11px]">{auditData.docId.slice(0, 18)}...</span>
+            <span className="font-mono text-[#FFDF73] text-[11px]">{auditData.docId.slice(0, 18)}...</span>
           </div>
 
           <div className="flex items-center justify-between">
             <span className="text-slate-400">Vigência Obrigatória:</span>
-            <span className="font-semibold text-[#CBB68B] flex items-center gap-1">
+            <span className="font-semibold text-[#FFDF73] flex items-center gap-1">
               <Calendar className="w-3.5 h-3.5" /> Sessões em 2026
             </span>
           </div>
@@ -167,7 +167,7 @@ export default function SuccessModal({
             type="button"
             onClick={handleDownloadPDF}
             disabled={isGeneratingPDF}
-            className="w-full py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold text-xs flex items-center justify-center gap-2 tap-luxury transition-luxury"
+            className="w-full py-3 px-4 rounded-xl bg-[#05070B] hover:bg-[#121824] text-slate-200 border border-[#D4AF37]/30 font-semibold text-xs flex items-center justify-center gap-2 tap-luxury transition-luxury cursor-pointer"
           >
             {isGeneratingPDF ? (
               <span>Gerando PDF oficial...</span>
@@ -178,7 +178,7 @@ export default function SuccessModal({
               </>
             ) : (
               <>
-                <Download className="w-4 h-4 text-[#CBB68B]" />
+                <Download className="w-4 h-4 text-[#FFDF73]" />
                 <span>Baixar Cópia do Contrato Assinado (PDF)</span>
               </>
             )}
