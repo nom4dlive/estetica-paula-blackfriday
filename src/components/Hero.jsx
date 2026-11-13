@@ -132,7 +132,7 @@ export default function Hero({ onExploreClick }) {
                 <div className="relative h-72 sm:h-80 w-full rounded-2xl overflow-hidden bg-slate-800">
                   <img
                     src="./assets/stitch/stitch_13_c4c0bc5c7b.jpg"
-                    alt="Dra. Paula Feliciano - Biomédica Esteta"
+                    alt="Dra. Paula Feliciano - Estética Avançada"
                     className="w-full h-full object-cover object-top"
                   />
                   
@@ -143,7 +143,7 @@ export default function Hero({ onExploreClick }) {
                     </div>
                     <div>
                       <p className="text-white text-xs font-bold font-serif">Dra. Paula Feliciano</p>
-                      <p className="text-[#CBB68B] text-[10px] tracking-wider uppercase font-medium">Biomédica Esteta • Harmonização VIP</p>
+                      <p className="text-[#CBB68B] text-[10px] tracking-wider uppercase font-medium">Estética Facial e Corporal • Harmonização VIP</p>
                     </div>
                   </div>
                 </div>

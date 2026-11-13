@@ -21,7 +21,7 @@ export default function LegalContract({ agreed, setAgreed, error }) {
             INSTRUMENTO PARTICULAR DE ADESÃO A PROTOCOLOS ESTÉTICOS — BLACK FRIDAY 2026
           </p>
           <p className="text-[10px] text-amber-400/80 mt-0.5">
-            Dra. Paula Feliciano Estética Avançada • Procedimentos Biomédicos Estéticos
+            Dra. Paula Feliciano Estética Avançada • Procedimentos Procedimentos Estéticos
           </p>
         </div>
 

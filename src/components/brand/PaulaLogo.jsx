@@ -79,7 +79,7 @@ const PaulaLogoHorizontal = memo(function PaulaLogoHorizontal({
         </span>
         {showCredentials && (
           <span className={`text-[10px] sm:text-[11px] font-sans tracking-[0.22em] uppercase font-semibold text-[#CBB68B]`}>
-            Estética Avançada • Biomédica
+            Estética Facial e Corporal
           </span>
         )}
       </div>

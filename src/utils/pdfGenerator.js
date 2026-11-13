@@ -56,7 +56,7 @@ export async function generateContractPDF({
   doc.setTextColor(200, 210, 225);
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(7);
-  doc.text('ESTÉTICA AVANÇADA • PROCEDIMENTOS BIOMÉDICOS • VALIDADE VINCULADA AO EXERCÍCIO DE 2026', pageWidth / 2, logoEmbedded ? 30 : 22, { align: 'center' });
+  doc.text('ESTÉTICA AVANÇADA • PROCEDIMENTOS ESTÉTICA AVANÇADA • VALIDADE VINCULADA AO EXERCÍCIO DE 2026', pageWidth / 2, logoEmbedded ? 30 : 22, { align: 'center' });
 
   let y = 44;
 
@@ -80,7 +80,7 @@ export async function generateContractPDF({
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(8.5);
   doc.setTextColor(51, 65, 85);
-  doc.text('CONTRATADA: DRA. PAULA FELICIANO — Biomédica Esteta | WhatsApp: (11) 98608-1762', margin + 4, y + 12);
+  doc.text('CONTRATADA: DRA. PAULA FELICIANO — Estética Avançada Esteta | WhatsApp: (11) 98608-1762', margin + 4, y + 12);
   doc.text(`CONTRATANTE: ${patient.name.toUpperCase()} | CPF: ${patient.cpf}`, margin + 4, y + 18);
   doc.text(`WHATSAPP: ${patient.phone} | E-MAIL: ${patient.email}`, margin + 4, y + 24);
 
