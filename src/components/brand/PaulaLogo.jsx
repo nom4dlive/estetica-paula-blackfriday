@@ -53,32 +53,32 @@ const PaulaLogoVertical = memo(function PaulaLogoVertical({
 const PaulaLogoHorizontal = memo(function PaulaLogoHorizontal({
   className = 'h-11',
   textColor = 'text-white',
-  goldColor = '#CBB68B',
-  subtitleColor = 'text-champagne-400',
+  goldColor = '#D4AF37',
+  subtitleColor = 'text-[#D4AF37]',
   showCredentials = true,
   onClick,
   ...props
 }) {
   return (
     <div
-      className={`inline-flex items-center gap-3 select-none ${onClick ? 'cursor-pointer' : ''} ${className}`}
+      className={`inline-flex items-center gap-2 sm:gap-3 select-none ${onClick ? 'cursor-pointer' : ''} ${className}`}
       onClick={onClick}
       role="banner"
       {...props}
     >
       {/* Vector Floral Emblem */}
       <div className="relative shrink-0 flex items-center justify-center p-0.5">
-        <div className="absolute inset-0 bg-[#CBB68B]/15 blur-md rounded-full pointer-events-none" />
-        <PaulaEmblem className="w-9 h-9 sm:w-11 sm:h-11 relative z-10 transition-transform duration-300 hover:scale-105" goldColor={goldColor} />
+        <div className="absolute inset-0 bg-[#D4AF37]/15 blur-md rounded-full pointer-events-none" />
+        <PaulaEmblem className="w-8 h-8 sm:w-11 sm:h-11 relative z-10 transition-transform duration-300 hover:scale-105" goldColor={goldColor} />
       </div>
 
       {/* Typography */}
       <div className="flex flex-col justify-center leading-tight">
-        <span className={`font-serif font-bold tracking-wider text-sm sm:text-base ${textColor}`}>
+        <span className={`font-serif font-bold tracking-wider text-xs sm:text-base whitespace-nowrap ${textColor}`}>
           DRA. PAULA FELICIANO
         </span>
         {showCredentials && (
-          <span className={`text-[10px] sm:text-[11px] font-sans tracking-[0.22em] uppercase font-semibold text-[#CBB68B]`}>
+          <span className={`text-[8.5px] sm:text-[11px] font-sans tracking-[0.15em] sm:tracking-[0.22em] uppercase font-semibold text-[#FFDF73] whitespace-nowrap`}>
             Estética Facial e Corporal
           </span>
         )}

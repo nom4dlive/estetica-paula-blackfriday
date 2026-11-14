@@ -13,11 +13,11 @@ export default function Header({ onSelectPackageClick }) {
         <span>BLACK FRIDAY VIP • Lote Oficial com Condições Exclusivas</span>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 py-2.5 sm:py-3 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-3 sm:px-4 py-2 sm:py-3 flex items-center justify-between gap-2 overflow-hidden">
         {/* Brand Lockup */}
-        <div className="flex items-center gap-3">
-          {/* Dra. Paula Circular Portrait */}
-          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-[#D4AF37] overflow-hidden bg-slate-900 shadow-md shadow-[#D4AF37]/20 shrink-0">
+        <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+          {/* Dra. Paula Circular Portrait - Hidden on mobile (<sm) for clean minimal header */}
+          <div className="hidden sm:block w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-[#D4AF37] overflow-hidden bg-slate-900 shadow-md shadow-[#D4AF37]/20 shrink-0">
             <img
               src={paulaAvatar}
               alt="Dra. Paula Feliciano"
@@ -27,7 +27,7 @@ export default function Header({ onSelectPackageClick }) {
 
           {/* Official Vector Logo Component */}
           <PaulaLogo.Horizontal
-            className="h-10 sm:h-11"
+            className="h-9 sm:h-11 min-w-0"
             textColor="text-white"
             goldColor="#D4AF37"
             showCredentials={true}
@@ -35,10 +35,10 @@ export default function Header({ onSelectPackageClick }) {
         </div>
 
         {/* Action Buttons with Motion-UI Tap Physics */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
           <button
             onClick={onSelectPackageClick}
-            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-200 hover:text-[#FFDF73] transition-colors tap-luxury"
+            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-200 hover:text-[#FFDF73] transition-colors tap-luxury cursor-pointer"
           >
             Ver Pacotes
           </button>
@@ -47,11 +47,11 @@ export default function Header({ onSelectPackageClick }) {
             href={`https://wa.me/${CLINIC_PHONE}?text=${encodeURIComponent('Olá, Dra. Paula Feliciano! Gostaria de garantir minha condição VIP Black Friday 2026.')}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 bg-[#10B981] hover:bg-emerald-600 text-white px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold shadow-lg shadow-emerald-950/40 tap-luxury transition-luxury"
+            className="inline-flex items-center gap-1.5 bg-[#10B981] hover:bg-emerald-600 text-white px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs sm:text-sm font-bold shadow-lg shadow-emerald-950/40 tap-luxury transition-luxury shrink-0"
           >
-            <MessageCircle className="w-4 h-4" />
-            <span className="hidden xs:inline">WhatsApp VIP</span>
-            <span className="xs:hidden">WhatsApp</span>
+            <MessageCircle className="w-4 h-4 shrink-0" />
+            <span className="hidden sm:inline">WhatsApp VIP</span>
+            <span className="sm:hidden text-[11px] font-bold">VIP</span>
           </a>
         </div>
       </div>

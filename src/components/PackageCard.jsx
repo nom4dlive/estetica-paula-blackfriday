@@ -10,7 +10,7 @@ export default function PackageCard({ pkg, isSelected, onSelect }) {
   return (
     <div
       onClick={() => onSelect(pkg)}
-      className={`relative rounded-3xl overflow-hidden cursor-pointer tap-luxury transition-luxury flex flex-col justify-between ${
+      className={`relative rounded-3xl overflow-hidden cursor-pointer tap-luxury transition-luxury flex flex-col justify-between w-full max-w-sm mx-auto ${
         isSelected
           ? 'ring-2 ring-[#D4AF37] bg-[#0C101A] shadow-2xl shadow-[#D4AF37]/20 transform -translate-y-1'
           : 'bg-[#0A0D16]/95 border border-[#D4AF37]/20 hover:border-[#D4AF37]/60 hover:bg-[#0E1322]'

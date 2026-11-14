@@ -124,13 +124,13 @@ export default function Hero({ onExploreClick }) {
 
           {/* Right Column: Dra. Paula Featured Card (Black Metal Edition) */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-sm sm:max-w-md">
+            <div className="relative w-full max-w-[340px] sm:max-w-md mx-auto">
               {/* Outer decorative glow */}
               <div className="absolute -inset-1 bg-gradient-to-tr from-red-600/25 via-[#D4AF37]/20 to-transparent rounded-3xl blur-xl pointer-events-none" />
 
               <div className="relative bg-[#07090E] border border-[#D4AF37]/40 rounded-3xl p-3 sm:p-3.5 shadow-2xl overflow-hidden group">
                 {/* Photo container - spacious & uncluttered portrait */}
-                <div className="relative h-96 sm:h-[440px] w-full rounded-2xl overflow-hidden bg-[#0A0D16]">
+                <div className="relative h-80 sm:h-[440px] w-full rounded-2xl overflow-hidden bg-[#0A0D16]">
                   <img
                     src={paulaHero}
                     alt="Dra. Paula Feliciano - Estética Facial & Corporal"

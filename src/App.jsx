@@ -145,7 +145,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#07090E] text-slate-100 flex flex-col font-sans selection:bg-[#D4AF37] selection:text-black">
+    <div className="min-h-screen bg-[#07090E] text-slate-100 flex flex-col font-sans selection:bg-[#D4AF37] selection:text-black w-full max-w-[100vw] overflow-x-hidden">
       {/* Sticky Header */}
       <Header
         onSelectPackageClick={() => {
@@ -153,7 +153,7 @@ export default function App() {
         }}
       />
 
-      <main className="flex-1">
+      <main className="flex-1 w-full max-w-[100vw] overflow-x-hidden">
         {/* Hero Section */}
         <Hero
           onExploreClick={() => {
